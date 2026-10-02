@@ -1,0 +1,27 @@
+{
+  "name": "lucid-devtools",
+  "productName": "Lucid DevTools",
+  "version": "1.0.0",
+  "description": "Offline developer utilities by Lucid Studios.",
+  "main": "main.js",
+  "author": "Lucid Studios",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "package:mac": "electron-builder --mac"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.lucidstudios.devtools",
+    "productName": "Lucid DevTools",
+    "copyright": "Copyright © Lucid Studios",
+    "files": ["main.js", "preload.js", "index.html", "style.css", "renderer.js", "package.json"],
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "target": ["dmg"]
+    }
+  }
+}

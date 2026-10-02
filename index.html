@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucid DevTools</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="drag side-drag"></div>
+      <div class="brand">
+        <div class="logo">L</div>
+        <div>
+          <div class="brand-name">Lucid DevTools</div>
+          <div class="brand-sub">Lucid Studios</div>
+        </div>
+      </div>
+      <div class="search">
+        <input id="search" type="text" placeholder="Search tools…" autocomplete="off" spellcheck="false" />
+        <kbd id="searchKey">⌘K</kbd>
+      </div>
+      <nav id="nav" class="nav"></nav>
+      <div class="side-foot">
+        <span class="dot"></span>
+        <div>
+          <div class="foot-title">Running locally</div>
+          <div class="foot-sub">Offline · no data leaves this app</div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="titlebar drag">
+        <div class="crumbs"><span class="muted">Tools</span><span class="sep">/</span><span id="crumb">—</span></div>
+        <div class="pill"><span class="dot"></span>Local</div>
+      </header>
+      <section id="workspace" class="workspace"></section>
+      <footer class="statusbar">
+        <span>Lucid DevTools v1.0.0</span>
+        <span id="hint">⌘↵ run · ⌘K search · ⌘1–9 switch tool</span>
+      </footer>
+    </main>
+  </div>
+  <div id="toast" class="toast"></div>
+  <script src="renderer.js"></script>
+</body>
+</html>
